@@ -33,3 +33,7 @@ switch (week_number)
        Console.WriteLine("Воскресенье");
        break; 
 }
+
+string[] week_day = {"Понедельник", "Вторник", "Среда",
+                     "Четверг", "Пятница", "Суббота", "Воскресенье"};
+Console.WriteLine(week_day[week_number - 1]);
