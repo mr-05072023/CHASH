@@ -1,5 +1,6 @@
-﻿Console.WriteLine("Введите два числа... ");
+﻿Console.Write("Введите первое число... ");
 int first_number = int.Parse(Console.ReadLine());
+Console.Write("Введите второе число... ");
 int second_number = int.Parse(Console.ReadLine());
 
 int first_square = first_number* first_number;
