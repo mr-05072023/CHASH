@@ -1,11 +1,11 @@
-﻿object[] ReversValueArray(int num)
+﻿object[] ReversValueArray(int num, int beginValue, int endValue)
 {
  int[] firstArray = new int[num];
  int[] reversArray = new int[num];
  object[] result = {firstArray, reversArray};
  for (int i = 0; i < num; i++)
  {
-    firstArray[i] = new Random().Next(-9, 10);
+    firstArray[i] = new Random().Next(beginValue, endValue);
     reversArray[i] = -firstArray[i];
  }
  return result;
@@ -32,7 +32,9 @@ int GetInfo(string message)
 }
 
 int num = GetInfo("Введите длину массива... ");
-object[] array = ReversValueArray(num);
+int beginValue = GetInfo("Введите начало диапазона вариантов... ");
+int endValue = GetInfo("Введите конец диапазона вариантов... ");
+object[] array = ReversValueArray(num, beginValue, endValue);
 int[] greatArray = (int[]) array[0];
 int[] reversArray = (int[]) array[1];
 PrintArray(greatArray); Console.Write(" -> "); PrintArray(reversArray); Console.WriteLine("");
